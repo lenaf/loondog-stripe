@@ -4,6 +4,7 @@ import '../css/index.css'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import siteData from "@/data/siteData";
+import CartProvider from "@/components/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +23,11 @@ export default function RootLayout({
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={inter.className}>
         <div className="flex h-screen flex-col justify-between font-sans">
-          <Header />
-          <main className="mb-auto">{children}</main>
-          <Footer />
+          <CartProvider>
+            <Header />
+            <main className="mb-auto">{children}</main>
+            <Footer />
+          </CartProvider>
         </div>
       </body>
     </html>
