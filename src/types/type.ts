@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type CartItem = {
     id: string;
     name: string;
@@ -11,6 +13,6 @@ export type Product = {
     name: string;
     price: number;
     currency: string;
-    imageSrc: string;
+    imageSrc: StaticImageData;
     imageAlt: string;
 }

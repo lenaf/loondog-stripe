@@ -1,12 +1,12 @@
-import {NextRequest, NextResponse} from "next/server";
-import {headers} from "next/headers";
-import {CartItem} from "@/types/type";
-import stripe from "@/config/stripe";
+import { NextRequest, NextResponse } from "next/server";
+import { headers } from "next/headers";
+import { CartItem } from "@/types/type";
+import stripe from "./stripe";
 
 
 export async function POST(req: NextRequest, res: NextResponse) {
     const headersList = headers();
-    const {cartDetails} = await req.json();
+    const { cartDetails } = await req.json();
     const cartDetailsArray: CartItem[] = Object.values(cartDetails) as CartItem[];
 
     const lineItems = cartDetailsArray.map((item: CartItem) => {
@@ -31,9 +31,9 @@ export async function POST(req: NextRequest, res: NextResponse) {
             cancel_url: `${headersList.get("origin")}/`,
         });
 
-        return NextResponse.json({sessionId: session.id});
+        return NextResponse.json({ sessionId: session.id });
     } catch (err) {
         console.log("Checkout Route error", err)
-        return NextResponse.json({error: "Error creating checkout session"});
+        return NextResponse.json({ error: "Error creating checkout session" });
     }
 }
