@@ -6,21 +6,20 @@ import NewsletterForm from "@/components/NewsletterForm";
 import WaveDivider from "@/components/WaveDivider";
 import siteData from "@/data/siteData";
 import Image from "next/image"
-import pride_1 from "public/images/photography/pride_1.png"
-import pride_2 from "public/images/photography/pride_2.png"
-import pride_3 from "public/images/photography/pride_3.png"
-import events from "public/images/icons/events.png"
+import clay_1 from "public/images/photography/clay_1.jpeg"
+import clay_2 from "public/images/photography/clay_2.jpeg"
+
 import { Product } from "@/types/type";
 import ProductCard from "@/components/productCard";
 import { data } from "@/data/products";
 
-const heroCarouselSrcs = [pride_1, pride_2, pride_3]
+const heroCarouselSrcs = [clay_1, clay_2]
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center">
+    <div>
 
-      <section id='home-hero' className="relative w-full animate-fade">
+      <section id='home-hero' className="relative w-full h-80">
         <Carousel id='home-hero-carousel'>
           {heroCarouselSrcs.map((src, i) =>
             <Image
@@ -28,12 +27,12 @@ export default function Home() {
               src={src}
               alt="Pride Photography"
               width={500}
-              className="w-full brightness-75	"
+              className="w-full brightness-75	h-80"
             />)}
         </Carousel>
         <div className="prose absolute left-16 sm:left-24 top-1/2 -translate-y-1/2 transform">
-          <h1 className="inline-block text-base-100 text-4xl sm:text-6xl backdrop-blur-sm">We are GLYS</h1>
-          <h6 className="text-base-100 text-base sm:text-xl backdrop-blur-sm">Growing LGBTQ+ youth support</h6>
+          <h1 className="inline-block text-base-100 text-4xl sm:text-6xl backdrop-blur-sm">Loondog Ceramics</h1>
+          <h6 className="text-base-100 text-base sm:text-xl backdrop-blur-sm">Mugs, Plates, Bowls, Objects</h6>
         </div>
       </section>
 
@@ -59,15 +58,6 @@ export default function Home() {
             <p>blah blah blah events are cool</p>
             <div className="card-actions">
               <LinkAsButton className="btn-accent" href="/events">View Events</LinkAsButton>
-            </div>
-          </div>
-        </div>
-        <div className="card w-96 shadow-xl">
-          <div className="card-body items-center text-center">
-            <h1 className="card-title">{`We've got merch!`}</h1>
-            <p>blah blah blah merch is cool</p>
-            <div className="card-actions">
-              <LinkAsButton target="_blank" className="btn-accent" href="https://www.bonfire.com/store/glys-store/">View Merch</LinkAsButton>
             </div>
           </div>
         </div>

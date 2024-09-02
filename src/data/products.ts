@@ -1,4 +1,4 @@
-import pride_1 from "public/images/photography/pride_1.png"
+import clay_1 from "public/images/photography/clay_1.jpeg"
 
 export const data = [
     {
@@ -6,7 +6,7 @@ export const data = [
         name: 'Earthen Bottle',
         price: 1000,
         currency: 'USD',
-        imageSrc: pride_1,
+        imageSrc: clay_1,
         imageAlt: 'Tall slender porcelain bottle with natural clay textured body and cork stopper.',
     },
     {
@@ -14,7 +14,7 @@ export const data = [
         name: 'Nomad Tumbler',
         price: 800,
         currency: 'USD',
-        imageSrc: pride_1,
+        imageSrc: clay_1,
         imageAlt: 'Olive drab green insulated bottle with flared screw lid and flat top.',
     },
     {
@@ -22,7 +22,7 @@ export const data = [
         name: 'Focus Paper Refill',
         price: 650,
         currency: 'USD',
-        imageSrc: pride_1,
+        imageSrc: clay_1,
         imageAlt: 'Person using a pen to cross a task off a productivity paper card.',
     },
     {
@@ -30,7 +30,7 @@ export const data = [
         name: 'Machined Mechanical Pencil',
         price: 1320,
         currency: 'USD',
-        imageSrc: pride_1,
+        imageSrc: clay_1,
         imageAlt: 'Hand holding black machined steel mechanical pencil with brass tip and top.',
     },
 ]

@@ -5,7 +5,7 @@ const Logo = ({ ...rest }: Omit<ImageProps, 'src' | 'alt'>) => <Image
     {...rest}
     width={rest.width ?? 100}
     src={logo}
-    alt="GLYS Logo"
+    alt="Loondog Logo"
 />
 
 

@@ -6,26 +6,25 @@ import LinkAsButton from './LinkAsButton';
 
 const Header = () => {
   return (
-    <header className="bg-base-100 sticky top-0 z-10 flex items-center justify-between py-4 px-4">
-      <div>
+    <header className="bg-base-100 sticky top-0 z-10 h-20 py-4 px-4">
+      <div className='flex justify-between items-center'>
         <Link href="/" >
-          <Logo className='-my-8' width={80} />
+          <Logo width={80} />
         </Link>
-      </div>
-      <div className='hidden sm:block'>
-        <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
-          {siteData.routes.map((link) => (
-            <Link
-              key={link.title}
-              href={link.href}
-            >
-              {link.title}
-            </Link>
-          ))}
-          <LinkAsButton className="btn-primary " href="https://givebutter.com/give2glys" target="_blank">Donate</LinkAsButton>
+        <div className='hidden sm:block'>
+          <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
+            {siteData.routes.map((link) => (
+              <Link
+                key={link.title}
+                href={link.href}
+              >
+                {link.title}
+              </Link>
+            ))}
+          </div>
         </div>
+        <MobileNav />
       </div>
-      <MobileNav />
     </header>
   )
 }

@@ -68,9 +68,6 @@ const MobileNav = () => {
               </Link>
             </div>
           ))}
-          <div className="px-12 py-4">
-            <LinkAsButton className="btn-primary" href="https://givebutter.com/give2glys" target="_blank">Dontate</LinkAsButton>
-          </div>
         </nav>
       </div>
     </>
