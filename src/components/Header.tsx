@@ -3,6 +3,7 @@ import MobileNav from './MobileNav'
 import Logo from './Logo'
 import siteData from '@/data/siteData';
 import LinkAsButton from './LinkAsButton';
+import CartModal from './cart/modal';
 
 const Header = () => {
   return (
@@ -23,6 +24,7 @@ const Header = () => {
             ))}
           </div>
         </div>
+        <CartModal />
         <MobileNav />
       </div>
     </header>
