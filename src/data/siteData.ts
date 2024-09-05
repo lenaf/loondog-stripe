@@ -1,6 +1,5 @@
 
-import clay_1 from "public/images/photography/clay_1.jpeg"
-import clay_2 from "public/images/photography/clay_2.jpeg"
+import hero1 from "public/images/photography/hero1.jpeg"
 
 const siteData = {
   title: 'Loondog Ceramics',
@@ -17,7 +16,7 @@ const siteData = {
   homeHeroText: [
     `YADA YADA CLAY `
   ],
-  homeHeroCarouselImages: [clay_1, clay_2]
+  homeHeroCarouselImages: [hero1]
 }
 export default siteData;
 

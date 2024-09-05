@@ -1,16 +1,19 @@
-"use client"
-
 import { Carousel } from "@/components/Carousel";
 import LinkAsButton from "@/components/LinkAsButton";
 import WaveDivider from "@/components/WaveDivider";
 import Image from "next/image"
 import siteData from "@/data/siteData";
+import { Stripe } from "stripe";
 
 import { Product } from "@/types/type";
 import ProductCard from "@/components/productCard";
-import { data } from "@/data/products";
 
-export default function Home() {
+export default async function Home() {
+  const stripe = new Stripe(process.env.STRIPE_TEST_SECRET_KEY ?? '');
+
+  const { data } = await stripe.products.list({ expand: ['data.default_price'], })
+  console.log(data)
+
   return (
     <div>
 
@@ -37,7 +40,7 @@ export default function Home() {
 
       <section id='products' className="px-12">
         <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
-          {data.map((product: Product) => (
+          {data.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

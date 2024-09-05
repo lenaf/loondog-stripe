@@ -1,3 +1,5 @@
+"use client"
+
 import { Children, useEffect, useRef, useState } from "react";
 import Button from "./Button";
 
