@@ -4,6 +4,9 @@ import Logo from './Logo'
 import siteData from '@/data/siteData';
 import LinkAsButton from './LinkAsButton';
 import CartModal from './cart/modal';
+import { Suspense } from 'react';
+import Cart from './cart';
+import OpenCart from './cart/open-cart';
 
 const Header = () => {
   return (
@@ -13,7 +16,7 @@ const Header = () => {
           <Logo width={80} />
         </Link>
         <div className='hidden sm:block'>
-          <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
+          {/* <div className="flex items-center space-x-4 leading-5 sm:space-x-6">
             {siteData.routes.map((link) => (
               <Link
                 key={link.title}
@@ -22,10 +25,12 @@ const Header = () => {
                 {link.title}
               </Link>
             ))}
-          </div>
+          </div> */}
         </div>
-        <CartModal />
-        <MobileNav />
+        <Suspense fallback={<OpenCart />}>
+          <Cart />
+        </Suspense>
+        {/* <MobileNav /> */}
       </div>
     </header>
   )

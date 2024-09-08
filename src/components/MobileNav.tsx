@@ -57,7 +57,7 @@ const MobileNav = () => {
           </button>
         </div>
         <nav className="fixed mt-8 h-full">
-          {siteData.routes.map((link) => (
+          {/* {siteData.routes.map((link) => (
             <div key={link.title} className="px-12 py-4">
               <Link
                 href={link.href}
@@ -67,7 +67,7 @@ const MobileNav = () => {
                 {link.title}
               </Link>
             </div>
-          ))}
+          ))} */}
         </nav>
       </div>
     </>

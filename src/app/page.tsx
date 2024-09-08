@@ -23,7 +23,7 @@ export default async function Home() {
             <Image
               key={i}
               src={src}
-              alt="Pride Photography"
+              alt="Ceramics"
               width={500}
               className="w-full brightness-75	h-80"
             />)}
@@ -31,7 +31,7 @@ export default async function Home() {
         <div className="prose absolute left-16 sm:left-24 top-1/2 -translate-y-1/2 transform">
           <h1 className="inline-block text-base-100 text-4xl sm:text-6xl backdrop-blur-sm">Loondog Ceramics</h1>
           <p className="text-base-100 text-base sm:text-xl backdrop-blur-sm">Mugs, Plates, Bowls, Objects</p>
-          <LinkAsButton className="btn-secondary" href="/about">Learn More</LinkAsButton>
+          <LinkAsButton className="btn-primary" href="/about">Learn More</LinkAsButton>
         </div>
       </section>
 

@@ -15,16 +15,16 @@ module.exports = {
   daisyui: {
     themes: ["light", "dark", "cupcake", "pastel", {
       custom: {
-        "primary": "#64c3c8",
-        "primary-content": "#0f172a",
+        "primary": "#58755E",
+        "primary-content": "#2A1018",
         "secondary": "#ef9fbc",
-        "secondary-content": "#0f172a",
+        "secondary-content": "#2A1018",
         "accent": "#bdb7da",
-        "accent-content": "#0f172a",
+        "accent-content": "#2A1018",
         "neutral": "#3d4451",
         "neutral-content": "#3d4451",
-        "base-100": "#faf7f5",
-        "base-content": "#0f172a",
+        "base-100": "#EAE5E1",
+        "base-content": "#2A1018",
         "info": "#60a5fa",
         "info-content": "#172554",
         "success": "#f6d860",
