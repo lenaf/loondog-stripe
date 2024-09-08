@@ -4,7 +4,7 @@ import '../css/index.css'
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import siteData from "@/data/siteData";
-import CartProvider from "@/components/provider";
+import CartProvider from "@/components/cart/provider";
 
 const inter = Inter({ subsets: ["latin"] });
 

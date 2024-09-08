@@ -5,8 +5,7 @@ import Image from "next/image"
 import siteData from "@/data/siteData";
 import { Stripe } from "stripe";
 
-import { Product } from "@/types/type";
-import ProductCard from "@/components/productCard";
+import ProductCard from "@/components/ProductCard";
 
 export default async function Home() {
   const stripe = new Stripe(process.env.STRIPE_TEST_SECRET_KEY ?? '');
