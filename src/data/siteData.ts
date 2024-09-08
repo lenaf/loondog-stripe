@@ -7,6 +7,7 @@ const siteData = {
   language: 'en-us',
   locale: 'en-US',
   routes: [
+    { href: '/', title: 'Loondog Ceramics' },
   ],
   homeHeroText: [
     `YADA YADA CLAY `

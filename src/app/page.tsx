@@ -17,7 +17,7 @@ export default async function Home() {
   return (
     <div>
 
-      <section id='home-hero' className="relative w-full h-80">
+      {/* <section id='home-hero' className="relative w-full h-80">
         <Carousel id='home-hero-carousel'>
           {siteData.homeHeroCarouselImages.map((src, i) =>
             <Image
@@ -33,7 +33,7 @@ export default async function Home() {
           <p className="text-base-100 text-base sm:text-xl backdrop-blur-sm">Mugs, Plates, Bowls, Objects</p>
           <LinkAsButton className="btn-primary" href="/about">Learn More</LinkAsButton>
         </div>
-      </section>
+      </section> */}
 
       <WaveDivider className="w-full py-8 stroke-primary" />
 
