@@ -1,8 +1,3 @@
-import { Carousel } from "@/components/Carousel";
-import LinkAsButton from "@/components/LinkAsButton";
-import WaveDivider from "@/components/WaveDivider";
-import Image from "next/image"
-import siteData from "@/data/siteData";
 import { Stripe } from "stripe";
 
 import ProductCard from "@/components/ProductCard";
@@ -34,7 +29,6 @@ export default async function Home() {
         </div>
       </section> */}
 
-      <WaveDivider className="w-full py-8 stroke-primary" />
 
 
       <section id='products' className="px-12">

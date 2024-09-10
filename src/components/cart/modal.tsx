@@ -2,7 +2,6 @@
 
 import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import OpenCart from "@/components/cart/open-cart";
 import { ShoppingCartIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { formatCurrencyString, useShoppingCart } from "use-shopping-cart";
 import CartItem from "@/components/cart/cart-item";
@@ -21,7 +20,10 @@ export default function CartModal() {
 
     return <>
         <button aria-label="Open cart" onClick={() => setOpenCart(true)}>
-            <OpenCart />
+            <div
+                className="relative flex h-11 w-11 items-center justify-center rounded-md border text-black transition-colors dark:border-neutral-700 dark:text-white cursor-pointer">
+                <ShoppingCartIcon className="w-5 h-5 transition-all ease-in-out hover:scale-110" />
+            </div>
         </button>
         <Transition.Root show={openCart} as={Fragment}>
             <Dialog as="div" className="relative z-10" onClose={() => setOpenCart(false)}>

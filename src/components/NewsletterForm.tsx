@@ -1,7 +1,7 @@
 
-import Button from "@/components/Button";
-import Input from "./Input";
-import Select from "./Select";
+import Button from "@/components/common/Button";
+import Input from "./common/Input";
+import Select from "./common/Select";
 
 export default function NewsletterForm(props: React.HTMLProps<HTMLFormElement>) {
   return (
