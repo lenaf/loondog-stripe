@@ -4,6 +4,7 @@ import { useState, useTransition } from "react";
 import { useShoppingCart } from "use-shopping-cart";
 import { Stripe } from "stripe";
 import { Product } from "use-shopping-cart/core";
+import Button from "../common/Button";
 
 type Props = {
     product: Stripe.Product
@@ -23,8 +24,8 @@ export default function AddToCart({ product, inventoryCount }: Props) {
     const cartProduct: Product = {
         sku: product.id,
         name: product.name,
-        price: 2,
-        currency: ''
+        price: (product.default_price as Stripe.Price).unit_amount ?? 0,
+        currency: (product.default_price as Stripe.Price).currency
     }
 
     const handleQuantity = (action: Action) => {
@@ -45,11 +46,7 @@ export default function AddToCart({ product, inventoryCount }: Props) {
             {/* QUANTITY */}
             {(inventoryCount !== 1) && <div
                 className="w-full flex flex-row justify-center border rounded-lg">
-                <button
-                    data-action="decrement"
-                    className={
-                        ' h-full w-20 cursor-pointer outline-none py-3'
-                    }
+                <Button
                     onClick={(e) => {
                         e.preventDefault();
                         handleQuantity(Action.Decrement);
@@ -57,7 +54,7 @@ export default function AddToCart({ product, inventoryCount }: Props) {
                     aria-label={`Add one ${product.name} to your cart`}
                 >
                     <span className="m-auto text-base">−</span>
-                </button>
+                </Button>
                 <input
                     type="number"
                     className="text-center w-full text-base hover md:text-basecursor-default flex items-center outline-none bg-transparent"

@@ -14,7 +14,7 @@ const NavLinks = ({ linkClass, ...rest }: React.HTMLProps<HTMLElement> & { linkC
         <Link
           key={link.title}
           href={link.href}
-          className={`${linkClass ?? ''} ${pathname === link.href ? 'underline underline-offset-8 decoration-primary' : ''}`}
+          className={`${linkClass ?? ''} ${pathname === link.href ? 'decoration-primary' : ''}`}
         >
           {link.title}
         </Link>

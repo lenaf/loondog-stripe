@@ -23,7 +23,7 @@ module.exports = {
         "accent-content": "#2A1018",
         "neutral": "#3d4451",
         "neutral-content": "#3d4451",
-        "base-100": "#EAE5E1",
+        "base-100": "#f3f3f1",
         "base-content": "#2A1018",
         "info": "#60a5fa",
         "info-content": "#172554",

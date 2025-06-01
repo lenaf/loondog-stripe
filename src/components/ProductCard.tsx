@@ -10,9 +10,8 @@ export default function ProductCard({ product }: Props) {
     const inventoryCount = Number(product.metadata.inventoryCount);
     const isPreOrder = inventoryCount < 1;
     return (
-        <a key={product.id} href="#" className="group">
-            <div
-                className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+        <a key={product.id} href={`/products/${product.id}`} className="group ">
+            <div className="aspect-square w-full">
                 <Image
                     src={product.images[0]}
                     alt={product.name}
@@ -29,7 +28,6 @@ export default function ProductCard({ product }: Props) {
                     currency: 'USD'
                 }).format(((product.default_price as Stripe.Price).unit_amount ?? 0) / 100)}
             </p>
-            <AddToCart product={product} inventoryCount={inventoryCount} />
         </a>
     )
 }
